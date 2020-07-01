@@ -2,6 +2,7 @@ const path = require('path');
 const cors = require('cors');
 
 const ourServicesController = require('../controllers/ourServicesController');
+const aboutUsController = require('../controllers/aboutUsController');
 
 module.exports = (app) => {
   app.use(cors());
@@ -11,5 +12,6 @@ module.exports = (app) => {
   });
 
   app.get('/api/our-services', ourServicesController.getOurServices);
+  app.get('/api/about-us', aboutUsController.getAboutUs);
 
 };
