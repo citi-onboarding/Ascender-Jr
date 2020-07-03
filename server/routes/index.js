@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const ourServicesController = require('../controllers/ourServicesController');
 const aboutUsController = require('../controllers/aboutUsController');
+const navbarController = require('../controllers/navbarController');
 
 module.exports = (app) => {
   app.use(cors());
@@ -13,5 +14,6 @@ module.exports = (app) => {
 
   app.get('/api/our-services', ourServicesController.getOurServices);
   app.get('/api/about-us', aboutUsController.getAboutUs);
+  app.get('/api/navbar', navbarController.getNavbar);
 
 };
