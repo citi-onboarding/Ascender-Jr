@@ -1,6 +1,6 @@
 const keystone = require('keystone');
 
-const ourServices = keystone.list('NossosServiços');
+const ourServices = keystone.list('OurServices');
 
 module.exports = {
 
