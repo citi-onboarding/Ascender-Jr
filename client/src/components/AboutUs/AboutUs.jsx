@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
+import './AboutUs.css';
+
 import Ray from '../../assets/ray.png';
 
 import ChipWeb from '../../assets/chip-web.svg';

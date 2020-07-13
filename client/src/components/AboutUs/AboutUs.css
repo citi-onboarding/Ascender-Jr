@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #052A4F;
+}
+
+/***** ABOUT US BODY *****/
+
+#section-about-us {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+  height: 100%;
+}
+
+/***** CONTAINER WITH CONTENT *****/
+
+#section-about-us .container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1260px;
+}
+
+
+#section-about-us .container >  h1 {
+  font-family: 'Lalezar', cursive;
+  color: var(--primary-color);
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  text-shadow: 1px 1px 3px #000000;
+  text-transform: capitalize;
+  font-weight: 400;
+  
+  margin-bottom: 32px;
+}
+
+/***** CARDS *****/
+
+#section-about-us .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 80%;
+  
+  margin: auto;
+}
+
+
+#section-about-us .cards h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+}
+
+#section-about-us .cards p, ul  {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.0rem;
+  font-weight: 400;
+
+  color: var(--primary-color);
+
+  margin: 10px 0px 0px;
+}
+
+/***** PRIMARY CARDS (VISION, MISSION AND VALUES) *****/
+
+#section-about-us .cards .primary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  grid-gap: 40px;
+  justify-content: center;
+}
+
+#section-about-us .cards .primary-cards .container-image  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-about-us .cards .primary-cards .container-image .chip-image  {
+  width: 100%;
+  max-width: 128px;
+}
+
+#section-about-us .cards .primary-cards .image {
+  position: absolute;
+  width: 100%;
+  max-width: 88px;
+}
+
+#section-about-us .cards .primary-cards, .company-history {
+  text-align: center;
+}
+
+/***** COMPANY HISTORY *****/
+
+#section-about-us .cards .company-history .company-subtitle {
+  display: inline-flex;
+}
+
+#section-about-us .cards .company-history .company-subtitle h2 {
+  margin: 0 16px;
+}
+
+#section-about-us .cards .company-history {
+  margin-top: 80px;
+}
+
+
+
+ /***** MEDIA QUERIES *****/
+
+@media (max-width: 1024px) {
+ 
+  html {
+    font-size: 55% !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  #section-about-us .container > h1 {
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    align-self: flex-end;
+    text-shadow: none;
+  }
+
+  #section-about-us .primary-cards h2 {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  #section-about-us .cards .company-history h2 {
+    font-family: 'Lalezar';
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+
+  #section-about-us .cards .primary-cards {
+    grid-template-columns: repeat(1, minmax(128px, 0.7fr));
+  }
+
+  #section-about-us .cards .primary-cards div:nth-of-type(1) {
+    order: 2;
+  }
+
+  #section-about-us .cards .primary-cards div:nth-of-type(2) {
+    order: 1;
+  }
+
+  #section-about-us .cards .primary-cards div:nth-of-type(3) {
+    order: 3;
+  }
+
+  #section-about-us .cards .company-history {
+    margin-top: 40px;
+  }
+
+  #section-about-us .cards .primary-cards .container-image .chip-image.mobile  {
+    display: flex !important;
+    width: 100%;
+    max-width: 98px;
+  }
+
+  #section-about-us .cards .primary-cards .container-image .chip-image.web {
+    display: none;
+  }
+
+
+  #section-about-us .cards .primary-cards .image {
+    width: 100%;
+    position: absolute;
+    max-width: 64px;
+  }
+
+}
