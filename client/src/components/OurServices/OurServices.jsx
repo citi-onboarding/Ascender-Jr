@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 
+import './OurServices.css';
+
 import api from '../../services/api';
 
 const OurServices = () => {
