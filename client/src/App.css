@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  list-style: none;
+}
+
+html {
+  /* A cada 1rem será considerada 10px */
+  font-size: 62.5%;
+}
+
+html, body {
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  
+  background-color: #FFF;
+  font-family: 'Lalezar', cursive;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
