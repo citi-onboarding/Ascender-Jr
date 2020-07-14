@@ -1,0 +1,371 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+/***** OUR SERVICES BODY *****/
+#section-our-services {
+  background-color: #021B33;
+  background-image: url("../../assets/grafismo-web.png");
+  background-repeat: repeat ;
+  background-position: center;
+  background-size: contain;
+}
+
+
+/***** CONTENT CAROUSEL *****/
+.container-carousel {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  max-width: 1440px;
+
+  margin: auto;
+}
+
+
+.container-carousel  h1 {
+  font-family: 'Lalezar', cursive;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #FFF;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 80px;
+  margin-bottom: 16px;
+ 
+}
+
+
+
+/***** SLICK BODY STYLES *****/
+
+.slick-slider {
+  width: 90% !important;
+  margin-bottom: 80px;
+}
+
+.slick-slide > div {
+  width: 90%;
+  margin: auto;
+ 
+}
+
+/***** CAROUSEL CARD *****/
+.container-carousel .card {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr;
+  align-self: center;
+  gap: 16px;
+
+  height: 100%;
+  width: 100%;
+  
+  min-height: 500px;
+
+  margin-bottom: 32px;
+  /*max-height: 480px;*/
+}
+
+.container-carousel .card h3 {
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+  font-weight: 900;
+  color: #052A4F;
+}
+
+.container-carousel .card .primary-card h3 {
+  margin: 12px 0;
+}
+
+.container-carousel .card p {
+  font-size: 2.0rem;
+  line-height: 2.8rem;
+  font-weight: 400;
+  color: #052A4F;
+}
+
+/***** PRIMARY CARD *****/
+.container-carousel .card .primary-card {
+  background: url("../../assets/primary-layer.svg") no-repeat;
+  background-size: cover;
+
+  height: 100%;
+  max-height: 500px;
+
+  border-radius: 12px;
+}
+
+.container-carousel .card .primary-card .content {
+  position: relative;
+
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  height: 100%;
+  
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  border-radius: 12px;
+}
+
+
+.container-carousel .card .primary-card .content .primary-card-image {
+  width: 100%;
+  height: 105%;
+  z-index: -1;
+}
+
+
+.container-carousel .card .primary-card .description {
+  position: absolute;
+  top: 55%;
+  background-color: #F2E463;
+
+  padding: 0 32px 32px 32px;
+  border-radius: 0 0 16px 16px;
+}
+
+
+
+
+/***** SECONDARY CARD *****/
+.container-carousel .card .secondary-card {
+  display: grid;
+  grid-template-rows: minmax(1fr , 250px);
+  gap: 16px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container-carousel .card .secondary-card .box-before, .box-after {
+  background-image: url("../../assets/secondary-layer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100%;
+
+  border-radius: 12px;
+}
+
+.container-carousel .card .secondary-card .content {
+  display: grid;
+  grid-template-rows: 1.8fr 1fr;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container-carousel .card .secondary-card .before-image, .after-image {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container-carousel .card .secondary-card .description {
+  /*position: absolute;
+  top: 80%;*/
+  height: 100%;
+  padding: 0 16px 16px 16px;
+  background-color: #F2E463;
+  border-radius: 0 0 16px 16px;
+}
+
+/***** SLICK DOTS AND ARROWS STYLES *****/
+.slick-dots li {
+  margin: 0 8px;
+}
+
+.slick-dots li button:before {
+  font-size: 28px;
+  color: #D4D4D4;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #F2E463 !important;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-prev, .slick-next {
+  top: 45%;
+}
+
+.slick-prev:before {
+  content: '\f053';
+}
+
+.slick-next:before {
+  content: '\f054';
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 40px;
+  opacity: 1;
+  color: #D4D4D4;
+  font-weight: 900;
+}
+
+/***** MOD SCROLLBAR ******/
+.container-carousel .card .primary-card .content::-webkit-scrollbar {
+  /*width: 4px;*/
+  display: none;
+}
+
+/*
+.container-carousel .card .primary-card .content::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.container-carousel .card .primary-card .content::-webkit-scrollbar-track {
+  display: none;
+}*/
+
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 1024px) {
+ 
+  html {
+    font-size: 55%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  #section-our-services {
+    background-color: #021B33;
+    background-image: url("../../assets/grafismo-mobile.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: contain;
+    
+  }
+
+  .container-carousel > h1 {
+    justify-content: flex-start;
+
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  
+    margin-bottom: 24px;
+    margin-right: 12%;
+  }
+
+
+  .container-carousel .card {
+    display: grid !important;
+    grid-template-columns:  1fr;
+    gap: 16px;
+    
+    width: 100%;
+  }
+
+  .container-carousel .card h3 {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+    font-weight: 900;
+    color: #052A4F;
+  }
+  
+  .container-carousel .card p {
+    font-size: 1.8;
+    line-height: 2.8rem;
+    font-weight: 400;
+    color: #052A4F;
+  }
+
+  .container-carousel .card .primary-card {
+    box-shadow: 0px 3px 6px #000000;
+  }
+
+
+  .container-carousel .card .secondary-card {
+    display: none;
+  }
+
+  .slick-dots li {
+    margin: 0 4px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 18px;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 28px;
+    font-weight: 900;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .container-carousel .card h3 {
+    font-size: 2.2rem;
+    line-height: 3.0rem;
+    font-weight: 900;
+    color: #052A4F;
+  }
+  
+  .container-carousel .card p {
+    font-size: 1.6;
+    line-height: 2.6rem;
+    font-weight: 400;
+    color: #052A4F;
+  }
+  
+  .container-carousel .card {
+    display: grid !important;
+    grid-template-columns: 1fr;
+
+    min-height: 400px;
+    width: 100%;
+  }
+
+
+  .container-carousel .card .primary-card {
+    max-height: 400px;
+  }
+
+  .container-carousel .card .primary-card .content {
+    display: grid;
+    grid-template-rows: 1.2fr 1fr;
+    height: 100%;
+  }
+
+  .container-carousel .card .primary-card .description {
+    padding: 0 16px 16px 16px;
+    text-align: center;
+  }
+
+  .container-carousel .card .secondary-card {
+    display: none;
+  }
+
+  .slick-dots li {
+    margin: 0 4px;
+  }
+
+}
