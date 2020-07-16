@@ -1,0 +1,159 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+:root {
+  --primary-color: #052A4F;
+}
+
+#section-clients-and-partners {
+  background-color: #FFF;
+  height: 100%;
+  margin: 80px 0;
+}
+
+
+/***** CONTENT CAROUSEL *****/
+#section-clients-and-partners .container-carousel {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: auto;
+}
+
+#section-clients-and-partners .container-carousel >  h1 {
+  font-family: 'Lalezar', cursive;
+  color: #021B33;
+  font-size: 4.8rem;
+  line-height: 5.8rem;
+  text-shadow: 1px 1px 3px #000000;
+  text-transform: capitalize;
+  font-weight: 400;
+
+  width: 90%;
+  align-self: center;
+  margin-bottom: 64px;
+}
+
+/***** SLICK BODY STYLES *****/
+#section-clients-and-partners .slick-slider {
+  width: 100% !important;
+  align-self: center;
+}
+
+#section-clients-and-partners .slick-slide > div {
+  margin: auto;
+  display: flex !important;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ 
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 32px;
+  width: 80%;
+}
+
+#section-clients-and-partners .slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+/***** BOX CARDS *****/
+#section-clients-and-partners .container-carousel .box-card {
+  display: flex !important;
+  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+
+  text-align: center;
+
+  width: 100% !important;
+}
+
+#section-clients-and-partners .container-carousel .box-card .partner-image {
+  max-width: 128px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 5px #000000;
+}
+
+#section-clients-and-partners .container-carousel .box-card .partner-info {
+  width: 100%;
+  max-width: 256px;
+  padding-left: 24px;
+}
+
+#section-clients-and-partners .container-carousel .box-card h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.0rem;
+  line-height: 3.0rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  color: var(--primary-color);
+}
+
+#section-clients-and-partners .container-carousel .box-card p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+
+  color: var(--primary-color);
+
+}
+
+/***** MEDIA QUERIES *****/
+@media (max-width: 1024px) {
+ 
+  html {
+    font-size: 55%;
+  }
+
+  #section-clients-and-partners .container-carousel .box-card .partner-image {
+    max-width: 96px;
+  }
+
+}
+@media (max-width: 768px) {
+  #section-clients-and-partners .container-carousel >  h1{
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    text-align: right;
+    text-shadow: none;
+  }
+
+  #section-clients-and-partners .slick-slide > div {
+    margin: auto;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 32px;
+  }
+
+  #section-clients-and-partners .slick-track {
+    display: block !important;
+    align-items: unset !important;
+  }
+
+  #section-clients-and-partners .container-carousel .box-card {
+    justify-content: center;
+  }
+
+  #section-clients-and-partners .container-carousel .box-card .partner-image {
+    max-width: 80px;
+  }
+  
+  #section-clients-and-partners .container-carousel .box-card .partner-info {
+    max-width: 256px;
+    padding-left: 12px;
+  }
+  
+  #section-clients-and-partners .container-carousel .box-card h2 {
+    display: none;
+  }
+
+}
