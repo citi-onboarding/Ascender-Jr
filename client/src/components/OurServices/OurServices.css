@@ -8,14 +8,14 @@
 #section-our-services {
   background-color: #021B33;
   background-image: url("../../assets/grafismo-web.png");
-  background-repeat: repeat ;
-  background-position: center;
-  background-size: contain;
+  background-repeat: no-repeat;
+  
+  background-size: cover;
 }
 
 
 /***** CONTENT CAROUSEL *****/
-.container-carousel {
+#section-our-services .container-carousel {
 
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@
 }
 
 
-.container-carousel  h1 {
+#section-our-services .container-carousel  h1 {
   font-family: 'Lalezar', cursive;
   text-transform: capitalize;
   font-weight: 400;
@@ -49,20 +49,19 @@
 
 
 /***** SLICK BODY STYLES *****/
-
-.slick-slider {
+#section-our-services .slick-slider {
   width: 90% !important;
   margin-bottom: 80px;
 }
 
-.slick-slide > div {
+#section-our-services .slick-slide > div {
   width: 90%;
   margin: auto;
  
 }
 
 /***** CAROUSEL CARD *****/
-.container-carousel .card {
+#section-our-services .container-carousel .card {
   display: grid !important;
   grid-template-columns: 2fr 1fr;
   align-self: center;
@@ -74,21 +73,20 @@
   min-height: 500px;
 
   margin-bottom: 32px;
-  /*max-height: 480px;*/
 }
 
-.container-carousel .card h3 {
+#section-our-services .container-carousel .card h3 {
   font-size: 2.4rem;
   line-height: 3.4rem;
   font-weight: 900;
   color: #052A4F;
 }
 
-.container-carousel .card .primary-card h3 {
+#section-our-services .container-carousel .card .primary-card h3 {
   margin: 12px 0;
 }
 
-.container-carousel .card p {
+#section-our-services .container-carousel .card p {
   font-size: 2.0rem;
   line-height: 2.8rem;
   font-weight: 400;
@@ -96,7 +94,7 @@
 }
 
 /***** PRIMARY CARD *****/
-.container-carousel .card .primary-card {
+#section-our-services .container-carousel .card .primary-card {
   background: url("../../assets/primary-layer.svg") no-repeat;
   background-size: cover;
 
@@ -106,7 +104,7 @@
   border-radius: 12px;
 }
 
-.container-carousel .card .primary-card .content {
+#section-our-services .container-carousel .card .primary-card .content {
   position: relative;
 
   display: grid;
@@ -120,14 +118,14 @@
 }
 
 
-.container-carousel .card .primary-card .content .primary-card-image {
+#section-our-services .container-carousel .card .primary-card .content .primary-card-image {
   width: 100%;
   height: 105%;
   z-index: -1;
 }
 
 
-.container-carousel .card .primary-card .description {
+#section-our-services .container-carousel .card .primary-card .description {
   position: absolute;
   top: 55%;
   background-color: #F2E463;
@@ -140,7 +138,7 @@
 
 
 /***** SECONDARY CARD *****/
-.container-carousel .card .secondary-card {
+#section-our-services .container-carousel .card .secondary-card {
   display: grid;
   grid-template-rows: minmax(1fr , 250px);
   gap: 16px;
@@ -148,7 +146,7 @@
   overflow: hidden;
 }
 
-.container-carousel .card .secondary-card .box-before, .box-after {
+#section-our-services .container-carousel .card .secondary-card .box-before, .box-after {
   background-image: url("../../assets/secondary-layer.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,7 +156,7 @@
   border-radius: 12px;
 }
 
-.container-carousel .card .secondary-card .content {
+#section-our-services .container-carousel .card .secondary-card .content {
   display: grid;
   grid-template-rows: 1.8fr 1fr;
   height: 100%;
@@ -166,15 +164,13 @@
   overflow: hidden;
 }
 
-.container-carousel .card .secondary-card .before-image, .after-image {
+#section-our-services .container-carousel .card .secondary-card .before-image, .after-image {
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
-.container-carousel .card .secondary-card .description {
-  /*position: absolute;
-  top: 80%;*/
+#section-our-services .container-carousel .card .secondary-card .description {
   height: 100%;
   padding: 0 16px 16px 16px;
   background-color: #F2E463;
@@ -182,42 +178,42 @@
 }
 
 /***** SLICK DOTS AND ARROWS STYLES *****/
-.slick-dots li {
+#section-our-services .slick-dots li {
   margin: 0 8px;
 }
 
-.slick-dots li button:before {
+#section-our-services .slick-dots li button:before {
   font-size: 28px;
   color: #D4D4D4;
   opacity: 1;
 }
 
-.slick-dots li.slick-active button:before {
+#section-our-services .slick-dots li.slick-active button:before {
   opacity: 1;
   color: #F2E463 !important;
 }
 
-.slick-next {
+#section-our-services .slick-next {
   right: -20px;
 }
 
-.slick-prev {
+#section-our-services .slick-prev {
   left: -20px;
 }
 
-.slick-prev, .slick-next {
+#section-our-services .slick-prev, .slick-next {
   top: 45%;
 }
 
-.slick-prev:before {
+#section-our-services .slick-prev:before {
   content: '\f053';
 }
 
-.slick-next:before {
+#section-our-services .slick-next:before {
   content: '\f054';
 }
 
-.slick-prev:before, .slick-next:before {
+#section-our-services .slick-prev:before, .slick-next:before {
   font-family: "Font Awesome 5 Free";
   font-size: 40px;
   opacity: 1;
@@ -226,21 +222,9 @@
 }
 
 /***** MOD SCROLLBAR ******/
-.container-carousel .card .primary-card .content::-webkit-scrollbar {
-  /*width: 4px;*/
+#section-our-services .container-carousel .card .primary-card .content::-webkit-scrollbar {
   display: none;
 }
-
-/*
-.container-carousel .card .primary-card .content::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0, 0.5);
-  border-radius: 12px;
-}
-
-.container-carousel .card .primary-card .content::-webkit-scrollbar-track {
-  display: none;
-}*/
-
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 1024px) {
@@ -248,32 +232,20 @@
   html {
     font-size: 55%;
   }
-}
-
-
-@media (max-width: 768px) {
 
   #section-our-services {
     background-color: #021B33;
     background-image: url("../../assets/grafismo-mobile.png");
-    background-repeat: repeat;
     background-position: center;
-    background-size: contain;
-    
+    background-size: cover;
   }
 
-  .container-carousel > h1 {
+  #section-our-services .container-carousel > h1 {
     justify-content: flex-start;
-
-    font-size: 3.2rem;
-    line-height: 4.2rem;
-  
-    margin-bottom: 24px;
     margin-right: 12%;
   }
 
-
-  .container-carousel .card {
+  #section-our-services .container-carousel .card {
     display: grid !important;
     grid-template-columns:  1fr;
     gap: 16px;
@@ -281,38 +253,68 @@
     width: 100%;
   }
 
-  .container-carousel .card h3 {
+  #section-our-services .container-carousel .card .primary-card {
+    box-shadow: 0px 3px 6px #000000;
+  }
+
+  #section-our-services .container-carousel .card .secondary-card {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  #section-our-services .container-carousel > h1 {
+
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+  
+    margin-bottom: 24px;
+  }
+
+
+  #section-our-services .container-carousel .card {
+    display: grid !important;
+    grid-template-columns:  1fr;
+    gap: 16px;
+    
+    width: 100%;
+  }
+
+  #section-our-services .container-carousel .card h3 {
     font-size: 2.2rem;
     line-height: 3.2rem;
     font-weight: 900;
     color: #052A4F;
   }
   
-  .container-carousel .card p {
+  #section-our-services .container-carousel .card p {
     font-size: 1.8;
     line-height: 2.8rem;
     font-weight: 400;
     color: #052A4F;
   }
 
-  .container-carousel .card .primary-card {
+  #section-our-services .container-carousel .card .primary-card {
     box-shadow: 0px 3px 6px #000000;
   }
 
 
-  .container-carousel .card .secondary-card {
+  #section-our-services .container-carousel .card .secondary-card {
     display: none;
   }
 
-  .slick-dots li {
+  #section-our-services .slick-dots li {
     margin: 0 4px;
   }
 
-  .slick-dots li button:before {
+  #section-our-services .slick-dots li button:before {
     font-size: 18px;
   }
   
-  .slick-prev:before, .slick-next:before {
+  #section-our-services .slick-prev:before, .slick-next:before {
     font-family: "Font Awesome 5 Free";
     font-size: 28px;
     font-weight: 900;
@@ -322,21 +324,21 @@
 
 @media (max-width: 560px) {
 
-  .container-carousel .card h3 {
+  #section-our-services .container-carousel .card h3 {
     font-size: 2.2rem;
     line-height: 3.0rem;
     font-weight: 900;
     color: #052A4F;
   }
   
-  .container-carousel .card p {
+  #section-our-services .container-carousel .card p {
     font-size: 1.6;
     line-height: 2.6rem;
     font-weight: 400;
     color: #052A4F;
   }
   
-  .container-carousel .card {
+  #section-our-services .container-carousel .card {
     display: grid !important;
     grid-template-columns: 1fr;
 
@@ -345,26 +347,26 @@
   }
 
 
-  .container-carousel .card .primary-card {
+  #section-our-services .container-carousel .card .primary-card {
     max-height: 400px;
   }
 
-  .container-carousel .card .primary-card .content {
+  #section-our-services .container-carousel .card .primary-card .content {
     display: grid;
     grid-template-rows: 1.2fr 1fr;
     height: 100%;
   }
 
-  .container-carousel .card .primary-card .description {
+  #section-our-services .container-carousel .card .primary-card .description {
     padding: 0 16px 16px 16px;
     text-align: center;
   }
 
-  .container-carousel .card .secondary-card {
+  #section-our-services .container-carousel .card .secondary-card {
     display: none;
   }
 
-  .slick-dots li {
+  #section-our-services .slick-dots li {
     margin: 0 4px;
   }
 
