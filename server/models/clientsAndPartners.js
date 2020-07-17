@@ -7,15 +7,19 @@ const { Types } = keystone.Field;
  */
 
 const ClientsAndPartners = new keystone.List('ClientsAndPartners', {
-	autokey: { from: 'name', path: 'key', unique: true },
+	map: { name: 'name' },
+  label: 'Clientes e Parceiros',
 });
 
 ClientsAndPartners.add({
-	text: {
-		type: Types.Textarea, require: false, initial: true,
+	name: {
+		type: Types.Text, required: true, initial: true, label: 'Nome', note: 'Nome do cliente ou parceiro'
+	},
+	description: {
+		type: Types.Textarea, required: true, initial: true,label: 'Descrição', note: 'Descrição sobre o cliente ou parceiro'
 	},
 	image: {
-		type: Types.CloudinaryImages, require: true, initial: true, 
+		type: Types.CloudinaryImage, required: true, initial: true, label: 'Imagem' 
 	}
 });
 
