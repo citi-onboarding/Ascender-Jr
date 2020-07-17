@@ -20,7 +20,7 @@ const ClientsAndPartners = () => {
     arrows: false,
     autoplay: true,
     infinite: true,
-    speed: 20000,
+    speed: 40000,
     autoplaySpeed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -50,8 +50,6 @@ const ClientsAndPartners = () => {
   };
 
 
-  console.log(partners)
-
   return (
     <section id="section-clients-and-partners">
       <div className="container-carousel">
@@ -59,7 +57,7 @@ const ClientsAndPartners = () => {
         <Slider {...settings}>
 
           {partners.map(partner => (
-            <div className="box-card" >
+            <div key={partner._id} className="box-card" >
               <img className="partner-image" src={ partner.image.secure_url } alt="Partner"/>
               <div className="partner-info">
                 <h2>{ partner.name }</h2>
