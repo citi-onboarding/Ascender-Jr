@@ -3,7 +3,6 @@
 }
 
 /***** ABOUT US BODY *****/
-
 #section-about-us {
   display: flex;
   justify-content: center;
@@ -12,7 +11,6 @@
 }
 
 /***** CONTAINER WITH CONTENT *****/
-
 #section-about-us .container {
   display: flex;
   flex-direction: column;
@@ -23,7 +21,7 @@
 
 #section-about-us .container >  h1 {
   font-family: 'Lalezar', cursive;
-  color: var(--primary-color);
+  color: #021B33;
   font-size: 4.8rem;
   line-height: 5.8rem;
   text-shadow: 1px 1px 3px #000000;
@@ -34,7 +32,6 @@
 }
 
 /***** CARDS *****/
-
 #section-about-us .cards {
   display: flex;
   flex-direction: column;
@@ -68,10 +65,9 @@
 }
 
 /***** PRIMARY CARDS (VISION, MISSION AND VALUES) *****/
-
 #section-about-us .cards .primary-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+  grid-template-columns: repeat(3, minmax(192px, 1fr));
   grid-gap: 40px;
   justify-content: center;
 }
@@ -114,7 +110,6 @@
 
 
  /***** MEDIA QUERIES *****/
-
 @media (max-width: 1024px) {
  
   html {
