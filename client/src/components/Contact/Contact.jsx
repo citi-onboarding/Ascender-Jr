@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
-import './App.css';
+import React from 'react';
+
 import './Contact.css';
 
-import instagram from './instagram.png';
-import whatsapp from './whatsapp.png';
-import gmail from './gmail.png';
-import linkedin from './linkedin.png';
-import facebook from './facebook.png';
-import userform from './user-form.png';
-import envelope from './envelope-form.png';
-import card from './card-form.png';
-import note from './note-form.png';
-import code from './code.svg';
-import coracao from './coracao.svg';
-import citi from './citi-logo.png';
+import instagram from './assets/instagram.png';
+import whatsapp from './assets/whatsapp.png';
+import gmail from './assets/gmail.png';
+import linkedin from './assets/linkedin.png';
+import facebook from './assets/facebook.png';
+import userform from './assets/user-form.png';
+import envelope from './assets/envelope-form.png';
+import card from './assets/card-form.png';
+import note from './assets/note-form.png';
+import code from './assets/code.svg';
+import coracao from './assets/coracao.svg';
+import citi from './assets/citi-logo.png';
 
 const Contact = () => {
     return (
