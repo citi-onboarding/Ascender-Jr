@@ -1,0 +1,50 @@
+.fundo-extra {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.box-extra {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('extra.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 3em;
+    border-radius: 15px;
+    border: 3px solid #0D3B66;
+    margin: 1em;
+}
+.close-extra {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 22px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border: 3px solid #0D3B66;
+    justify-content: center;
+    align-items: center;
+    color: #0D3B66;
+}
+.box-extra p, .close-extra {
+    font-family: 'Lalezar', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 19px;
+    text-align: center;
+    
+}
+
+.box-extra p {
+    width: 70%;
+    color: #0D3B66;
+}
