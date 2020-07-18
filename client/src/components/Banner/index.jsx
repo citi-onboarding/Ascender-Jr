@@ -4,7 +4,6 @@ import './Banner.css';
 
 import api from '../../services/api';
 
-import bannerBase from './banner-base.png';
 import logo from './logooficial.png';
 
 
@@ -15,12 +14,11 @@ const Banner = () => {
 
   useEffect(() => {
 
-    api.get('our-services').then(response => {
+    api.get('/banner').then(response => {
       const dataBanners = response.data;
 
       setBanners(dataBanners);
     });
-
   }, []);
   const settings = {
     dots: false,
@@ -34,10 +32,10 @@ const Banner = () => {
     return (
       <div id="slider-container">
         <Slider {... settings}>
-          {banners.map(banner => (                
-            <div className="main-content" key={banner.bannerName}>    
-                <img src= { banner.imageUrl } className="Banner-image"/>
-                <h1 className="text">{banner.text}</h1>
+          {banners.map(({ imageUrl, text, _id }) => (
+            <div className="main-content" key={_id}>
+                <img src= { imageUrl[0].url } className="Banner-image" alt=""/>
+                <h1 className="text">{text}</h1>
             </div>
           ))}
         </Slider>

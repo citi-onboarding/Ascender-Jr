@@ -1,10 +1,11 @@
 import React from 'react';
+import Banner from './components/Banner';
 
-import './App.css';
-
-const App = () => {
+function App() {
   return (
-    <h1>App</h1>
+    <section className="app">
+      <Banner />
+    </section>
   );
 }
 
