@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useReducer } from 'react';
+
+import api from '../../services/api';
 
 import './Contact.css';
 
@@ -15,7 +17,45 @@ import code from './assets/code.svg';
 import coracao from './assets/coracao.svg';
 import citi from './assets/citi-logo.png';
 
+
+const initialState = {
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+};
+
+const reducer = (state, action) => {
+
+    if (action.type === "reset") {
+        return initialState;
+    }
+
+    const result = { ...state };
+    result[action.field] = action.value;
+    return result;
+};
+
 const Contact = () => {
+
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const { name, email, subject, message } = state;
+
+    const handleChange = (e) => {
+        dispatch({ field: e.target.name, value: e.target.value });
+    }
+
+
+    const sendContact = (e) => {
+        e.preventDefault();
+
+        api.post('send-email', state).then(response => {
+        
+            dispatch({ type: "reset" });
+        })
+        
+    }
+
     return (
         <div id="secao-contato">
             <div className="blur-degrade">
@@ -37,24 +77,24 @@ const Contact = () => {
                 </div>
                 <div className="form-contato">
                     <h2>Contato</h2>
-                    <form action="">
+                    <form onSubmit={sendContact}>
                         <div className="alinhar-svg-input">
                             <img className="svg-input" src= { userform } alt=""/>
-                            <input type="text" placeholder="Nome"/>
+                            <input type="text" placeholder="Nome" name="name" value={name} onChange={handleChange}/>
                         </div>
                         <div className="alinhar-svg-input">
                             <img className="svg-input" src= { envelope } alt=""/>
-                            <input type="text" placeholder="E-mail"/>
+                            <input type="text" placeholder="E-mail" name="email" value={email} onChange={handleChange}/>
                         </div>
                         <div className="alinhar-svg-input">
                             <img className="svg-input" src= { card } alt=""/>
-                            <input type="text" placeholder="Assunto"/>
+                            <input type="text" placeholder="Assunto" name="subject" value={subject} onChange={handleChange}/>
                         </div>
                         <div className="alinhar-svg-input">
                             <img className="form-msg-img svg-input" src= { note } alt=""/>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem" name="message" value={message} onChange={handleChange}/>
                         </div>  
-                        <button>ENVIAR</button>
+                        <button type="submit">ENVIAR</button>
                     </form>
                 </div>
             </div>
