@@ -85,8 +85,9 @@
 
 #section-about-us .cards .primary-cards .image {
   position: absolute;
-  width: 100%;
+  width: auto;
   max-width: 88px;
+  max-height: 78px;
 }
 
 #section-about-us .cards .primary-cards, .company-history {
@@ -168,11 +169,11 @@
     display: none;
   }
 
-
   #section-about-us .cards .primary-cards .image {
-    width: 100%;
+    width: auto;
     position: absolute;
     max-width: 64px;
+    max-height: 54px;
   }
 
 }
