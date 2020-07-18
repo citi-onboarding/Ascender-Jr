@@ -92,7 +92,7 @@ const Contact = () => {
                         </div>
                         <div className="alinhar-svg-input">
                             <img className="form-msg-img svg-input" src= { note } alt=""/>
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem" name="message" value={message} onChange={handleChange}/>
+                            <textarea id="" cols="30" rows="10" placeholder="Mensagem" name="message" value={message} onChange={handleChange}/>
                         </div>  
                         <button type="submit">ENVIAR</button>
                     </form>
