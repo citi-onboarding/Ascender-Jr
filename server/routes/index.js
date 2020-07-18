@@ -5,7 +5,7 @@ const ourServicesController = require('../controllers/ourServicesController');
 const aboutUsController = require('../controllers/aboutUsController');
 const navbarController = require('../controllers/navbarController');
 const clientsAndPartners = require('../controllers/clientsAndPartnersController');
-
+const mailController = require('../controllers/mailController');
 
 const bannerController  = require('../controllers/bannerController');
 
@@ -21,7 +21,7 @@ module.exports = (app) => {
   app.get('/api/navbar', navbarController.getNavbar);
   app.get('/api/clients-and-partners', clientsAndPartners.getClientsAndPartners);
 
-
+  app.post('/api/send-email', mailController);
   
   app.get('/api/banner', bannerController.getBanner);
 };
