@@ -1,40 +1,47 @@
-body {
-    margin: 0;
-}
-.secao-contato {
-    background-image: url("Grafismos-07-1.png");
+
+#secao-contato {
+    background-image: url("./assets/background-contact.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
-.container-whatsapp, .container-email, .container-social-media {
+#secao-contato .container-whatsapp, .container-email, .container-social-media {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
 }
-.container-social-media a{
+#secao-contato .container-social-media a{
     height: 50px;
 }
-.container-whatsapp img, .container-email img, .container-social-media img {
+#secao-contato .container-whatsapp img, .container-email img, .container-social-media img {
     width: 50px;
 }
-.container-social-media img:hover {
+#secao-contato .container-social-media img:hover {
     width: 44px;
     filter: brightness(0.7);
 }
-.infos-contato {
+#secao-contato .infos-contato {
     width: 40%;
 }
-.infos-contato p {
+#secao-contato .infos-contato p {
     width: 17em;
 }
-.form-contato, form {
+#secao-contato .form-contato, form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
-.alinhar-svg-input {
+
+#secao-contato input::placeholder, textarea::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 700;
+    color: #34618D;
+}
+
+#secao-contato .alinhar-svg-input {
     position: relative;
     width: -webkit-fill-available;
     margin-bottom: 1em;
@@ -42,93 +49,100 @@ body {
     justify-content: center;
     align-items: center;
 }
-.alinhar-svg-input img {
+#secao-contato .alinhar-svg-input img {
     position: absolute;
     width: 20px;
     left: 10px;
 }
-.alinhar-svg-input input {
+#secao-contato .alinhar-svg-input input {
     width: -webkit-fill-available;
     height: 2.5em;
     border-radius: 7px;
     border: none;
     padding-left: 35px;
 }
-.alinhar-svg-input textarea {
+
+#secao-contato .alinhar-svg-input textarea {
     border-radius: 7px;
     border: none;
-    font-family: Open Sans;
+    font-family: 'Open Sans', sans-serif;
     text-indent: 32px;
     padding-top: 11px;
     color: grey;
     width: -webkit-fill-available;
     resize: none;
 }
-.alinhar-svg-input input:focus, .alinhar-svg-input textarea:focus {
+#secao-contato .alinhar-svg-input input:focus, .alinhar-svg-input textarea:focus {
     border: none;
     outline: none;
 }
-.form-contato {
+#secao-contato .form-contato {
     width: 25%;
 }
-.form-contato h2 {
+#secao-contato .form-contato h2 {
     margin: 0;
     font-family: 'Lalezar', cursive;
+    font-weight: 400;
     margin-bottom: 15px;
-    font-size: 35px;
+    font-size: 40px;
     text-shadow: 1px 3px black;
 }
-.form-msg-img {
+#secao-contato .form-msg-img {
     top: 10px!important;
 }
-.infos-contato p {
-    font-family: Open Sans;
+#secao-contato .infos-contato p {
+    font-family: 'Open Sans', sans-serif;
     text-align: left;
     letter-spacing: 0px;
+    font-weight: 600;
     color: #FFFFFF;
     opacity: 1;
     font-size: 15px;
 }
-.form-contato form {
+#secao-contato .infos-contato .ascender-info {
+    font-weight: 500;
+}
+#secao-contato .form-contato form {
     width: 100%;
     max-width: 25em;
     min-width: 20em;
 }
-.form-contato input, .form-contato textarea {
+#secao-contato .form-contato input, .form-contato textarea {
     color: #34618D;
 }
-.form-contato form button {
+#secao-contato .form-contato form button {
     background-color: transparent;
     border: 4px solid grey;
     padding: 0px 50px;
     font-family: 'Lalezar', cursive;
+    font-weight: 400;
     font-size: 20px;
     color: white;
     border-radius: 11px;
     text-shadow: 2px 3px black;
 }
-.form-contato form button:hover {
+#secao-contato .form-contato form button:hover {
     padding: 4px 58px;
     font-size: 15px;
     background-color: #0000004f;
     cursor: pointer;
 }
-#linkedin {
+#secao-contato #linkedin {
     margin: 0 15px;
 }
-#linkedin:hover {
+#secao-contato #linkedin:hover {
     margin: 0 18px;
 }
-#instagram:hover {
+#secao-contato #instagram:hover {
     margin: 0 3px;
 }
-.svg-whatsapp, .svg-email {
+#secao-contato .svg-whatsapp, .svg-email {
     margin-right: 1em;
 }
-.container-whatsapp p, .container-email p {
+#secao-contato .container-whatsapp p, .container-email p {
     font-style: italic;
 }
-.blur-degrade {
+#secao-contato .blur-degrade {
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.61));
     display: flex;
     align-items: center;
@@ -137,94 +151,97 @@ body {
     height: 100%;
     padding: 3em 0;
 }
-.ch-footer {
+#secao-contato .ch-footer {
     width: 1.5em;
     margin: 0px 10px;
 }
-footer {
-    font-family: Open Sans;
-    font-style: italic;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-    font-size: 15px;
-    background-color: black;
-    border-top: 1px solid;
+#secao-contato footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 0px;
+    font-size: 16px;
+
+    background-color: black;
+    color: #FFFFFF;
+    opacity: 1;
+    border-top: 1px solid;
+    padding: 24px 0;
 }
-footer p {
+#secao-contato footer p {
     display: flex;
     align-items: center;
 }
-#citi-logo {
+#secao-contato #citi-logo {
     width: 3.5em;
 }
 
 @media only screen and (max-width: 1000px) {
-    .blur-degrade  {
+    #secao-contato .blur-degrade  {
         flex-direction: column;
     }
-    .form-contato {
+    #secao-contato .form-contato {
         width: 40%;
     }
-    .form-contato, form {
+    #secao-contato .form-contato, form {
         align-items: center;
     }
-    .container-whatsapp p, .container-email p {
+    #secao-contato .container-whatsapp p, .container-email p {
         width: fit-content;
     }
-    .infos-contato {
+    #secao-contato .infos-contato {
         width: fit-content;
         margin-bottom: 1em;
     }
 } 
 @media only screen and (max-width: 400px) {
-    .form-contato form {
+    #secao-contato .form-contato form {
         min-width: 15em;
     }
-    .infos-contato {
+    #secao-contato .infos-contato {
         max-width: 15em;
     }
-    .form-contato {
+    #secao-contato .form-contato {
         width: 90%;
     }
-    .form-contato form {
+    #secao-contato .form-contato form {
         min-width: unset;
     }
-    .infos-contato p {
+    #secao-contato .infos-contato p {
         width: 90%;
     }
-    .svg-whatsapp, .svg-email {
+    #secao-contato .svg-whatsapp, .svg-email {
         margin-right: unset;
     }
-    .infos-contato p {
+    #secao-contato .infos-contato p {
         width: fit-content;
     }
-    .container-social-media {
+    #secao-contato .container-social-media {
         width: unset;
         justify-content: center;
     }
-    .infos-contato p {
+    #secao-contato .infos-contato p {
         padding: 0 10px;
     }
-    .container-whatsapp img, .container-email img, .container-social-media img {
+    #secao-contato .container-whatsapp img, .container-email img, .container-social-media img {
         width: 2.5em;
     }
-    .container-whatsapp p, .container-email p {
+    #secao-contato .container-whatsapp p, .container-email p {
         padding: 0;
     }
-    .container-whatsapp, .container-email, .container-social-media {
+    #secao-contato .container-whatsapp, .container-email, .container-social-media {
         padding: 0 10px;
     }
-    .infos-contato p {
+    #secao-contato .infos-contato p {
         font-size: 12px;
     }
 }
 @media only screen and (max-width: 250px) {
-    .ch-footer {
+    #secao-contato .ch-footer {
         width: 1em;
         margin: 0px 2px 0px 6px;
     }
