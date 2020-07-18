@@ -1,0 +1,89 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar-nav">
+        <div id="logo-container">
+            <img src="logo.png" id="logo" alt="logo">
+        </div>
+        <ul id="navbar">
+            <li>
+                <a href="">SOBRE NÓS</a>
+            </li>
+            <li>
+                <a href="">SERVIÇOS</a>
+            </li>
+            <li>
+                <a href="">PARCERIAS</a>
+            </li>
+            <li>
+                <a href="">CONTATO</a>
+            </li>
+            <li>
+                <a href="">EXTRA</a>
+            </li>
+        </ul>
+        <div class="container-menuDown" onclick="menuDropdown(this)">
+            <div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="menuDown" class="menuDown">
+                <ul>
+                    <li>
+                        <a href="">SOBRE NÓS</a>
+                    </li>
+                    <li>
+                        <a href="">SERVIÇOS</a>
+                    </li>
+                    <li>
+                        <a href="">PARCERIAS</a>
+                    </li>
+                    <li>
+                        <a href="">CONTATO</a>
+                    </li>
+                    <li>
+                        <a href="">EXTRA</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
+                document.getElementById("navbar-nav").style.height = "75px";
+                document.getElementById("logo").style.transform = "scale(0.8)";
+                document.getElementById("navbar-nav").style.transition = "300ms";
+                document.getElementById("logo").style.transition = "500ms";
+                document.getElementById("navbar-nav").style.backgroundColor = "#052A4F";
+            } else {
+                document.getElementById("navbar-nav").style.height = "100px";
+                document.getElementById("logo").style.transform = "scale(1)";
+                document.getElementById("navbar-nav").style.transition = "300ms";
+                document.getElementById("logo").style.transition = "500ms";
+                document.getElementById("navbar-nav").style.backgroundColor = "transparent";
+            }
+        }
+    </script>
+    
+    <script>
+    function menuDropdown(x) {
+      x.classList.toggle("changeBars");
+      
+      var menu = document.getElementById("menuDown");
+      menu.classList.toggle("showMenu");
+    }
+    </script>
+</body>
+</html>
