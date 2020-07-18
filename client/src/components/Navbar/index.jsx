@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Navbar.css';
 
 import logo from './logo.png';
@@ -44,7 +44,7 @@ class Navbar extends React.Component {
         return (
             <nav id="navbar-nav">
             <div id="logo-container">
-                <a href="#"><img src={ logo } id="logo" alt="logo"/></a>
+                <a href="#slider-container"><img src={ logo } id="logo" alt="logo"/></a>
             </div>
             <ul id="navbar">
                 <li>
@@ -57,19 +57,19 @@ class Navbar extends React.Component {
                     <a href="#section-clients-and-partners">PARCERIAS</a>
                 </li>
                 <li>
-                    <a href="#section-contact">CONTATO</a>
+                    <a href="#secao-contato">CONTATO</a>
                 </li>
                 <li>
-                    <a href="">EXTRA</a>
+                    <a href="#extra">EXTRA</a>
                 </li>
             </ul>
-            <div class="container-menuDown" onClick={ this.handleClick }>
+            <div className="container-menuDown" onClick={ this.handleClick }>
                 <div>
-                    <div class={ this.state.condition ? "changeBars1 bar1" : "bar1" }></div>
-                    <div class={ this.state.condition ? "changeBars2 bar2" : "bar2" }></div>
-                    <div class={ this.state.condition ? "changeBars3 bar3" : "bar3" }></div>
+                    <div className={ this.state.condition ? "changeBars1 bar1" : "bar1" }></div>
+                    <div className={ this.state.condition ? "changeBars2 bar2" : "bar2" }></div>
+                    <div className={ this.state.condition ? "changeBars3 bar3" : "bar3" }></div>
                 </div>
-                <div id="menuDown"  class={ this.state.condition ? "menuDown showMenu" : "menuDown" }>
+                <div id="menuDown"  className={ this.state.condition ? "menuDown showMenu" : "menuDown" }>
                     <ul>
                         <li>
                             <a href="#section-about-us">SOBRE NÓS</a>
@@ -81,10 +81,10 @@ class Navbar extends React.Component {
                             <a href="#section-clients-and-partners">PARCERIAS</a>
                         </li>
                         <li>
-                            <a href="#section-contact">CONTATO</a>
+                            <a href="#secao-contato">CONTATO</a>
                         </li>
                         <li>
-                            <a href="">EXTRA</a>
+                            <a href="#extra">EXTRA</a>
                         </li>
                     </ul>
                     <img src={ luz } id="luz" alt="luz"/>
