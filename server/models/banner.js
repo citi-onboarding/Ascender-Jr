@@ -7,8 +7,10 @@ const { Types } = keystone.Field;
  */
 
 const Banner = new keystone.List('Banner', {
-	autokey: { from: 'name', path: 'key', unique: true },
-});
+	map: { name: 'bannerName' },
+	label: 'Banners'
+  });
+  
 
 Banner.add({
 	text: {
