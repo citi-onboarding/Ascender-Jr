@@ -17,7 +17,7 @@ import citi from './assets/citi-logo.png';
 
 const Contact = () => {
     return (
-        <div className="secao-contato">
+        <div id="secao-contato">
             <div className="blur-degrade">
                 <div className="infos-contato">
                     <div className="container-whatsapp">
@@ -33,7 +33,7 @@ const Contact = () => {
                         <a href="" id="linkedin"><img className="linkedin" src= { linkedin } alt=""/></a>
                         <a href=""><img className="facebook" src= { facebook } alt=""/></a>
                     </div>
-                    <p>Ascender Jr. - Soluções em Energia | © 2020 Universidade Federal de Ouro Preto CNPJ: 20.413.778/0001-30</p>
+                    <p className="ascender-info">Ascender Jr. - Soluções em Energia | © 2020 Universidade Federal de Ouro Preto CNPJ: 20.413.778/0001-30</p>
                 </div>
                 <div className="form-contato">
                     <h2>Contato</h2>
