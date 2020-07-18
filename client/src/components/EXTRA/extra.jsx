@@ -1,20 +1,23 @@
-
-import React, {Component} from 'react';
+import React from 'react';
 import './extra.css';
 
-import extra from './extra.png';
+const Extra = () => {
 
-class Extra extends React.Component {
-    render() {
-        return (
-            <div class="fundo-extra">
-            <div class="box-extra">
-                <button class="close-extra">X</button>
-                <p>Ops, ainda trabalhando nessa seção</p>
-            </div>
-        </div>
-        );  
+    const closeExtra = () => {
+        const extraModal = document.querySelector('.fundo-extra');
+        extraModal.style.display = 'none';
     }
+
+
+    return (
+        <div className="fundo-extra">
+        <div className="box-extra">
+            <button className="close-extra" onClick={closeExtra}>X</button>
+            <p>Ops, ainda trabalhando nessa seção</p>
+        </div>
+        </div>
+    );  
+
 
 }
 export default Extra;
