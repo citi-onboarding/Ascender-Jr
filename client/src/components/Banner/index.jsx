@@ -4,7 +4,7 @@ import './Banner.css';
 
 import api from '../../services/api';
 
-import logo from './logooficial.png';
+import logo from '../../assets/logooficial.png';
 
 
 const Banner = () => {
