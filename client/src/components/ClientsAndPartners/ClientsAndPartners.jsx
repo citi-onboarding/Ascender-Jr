@@ -35,7 +35,7 @@ const ClientsAndPartners = () => {
           arrows: false,
           autoplay: true,
           infinite: true,
-          speed: 10000,
+          speed: 20000,
           autoplaySpeed: 1,
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -43,7 +43,6 @@ const ClientsAndPartners = () => {
           slidesPerRow: 1,
           vertical: true,
           verticalSwiping: true,
-          swipeToSlide: true,
         }
       },
     ]
