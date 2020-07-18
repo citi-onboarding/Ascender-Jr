@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-const mailServer = require('./mailServer');
+const mailServer = require('../services/mailServer');
 
 const sendMail = async (req, res, next) => {
   try {
@@ -9,7 +9,7 @@ const sendMail = async (req, res, next) => {
       Nome: ${name}
       Email: ${email}
       Mensagem: ${message}`;
-
+      
     await mailServer({
       destinationUser: process.env.CLIENT_EMAIL,
       subjectText: subject,
