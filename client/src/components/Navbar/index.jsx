@@ -46,7 +46,7 @@ class Navbar extends React.Component {
             </div>
             <ul id="navbar">
                 <li>
-                    <a href="">SOBRE NÓS</a>
+                    <a href="#section-about-us">SOBRE NÓS</a>
                 </li>
                 <li>
                     <a href="">SERVIÇOS</a>
