@@ -3,6 +3,7 @@ import './Navbar.css';
 
 import logo from './logo.png';
 import luz from './luz-menu.png';
+
 class Navbar extends React.Component {
     constructor() {
         super();
@@ -10,6 +11,7 @@ class Navbar extends React.Component {
             className: 'hidden'
         }
     }
+    
     handleScroll() { 
         if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
             document.getElementById("navbar-nav").style.height = "75px";
@@ -42,20 +44,20 @@ class Navbar extends React.Component {
         return (
             <nav id="navbar-nav">
             <div id="logo-container">
-                <img src={ logo } id="logo" alt="logo"/>
+                <a href="#"><img src={ logo } id="logo" alt="logo"/></a>
             </div>
             <ul id="navbar">
                 <li>
                     <a href="#section-about-us">SOBRE NÓS</a>
                 </li>
                 <li>
-                    <a href="">SERVIÇOS</a>
+                    <a href="#section-our-services">SERVIÇOS</a>
                 </li>
                 <li>
-                    <a href="">PARCERIAS</a>
+                    <a href="#section-clients-and-partners">PARCERIAS</a>
                 </li>
                 <li>
-                    <a href="">CONTATO</a>
+                    <a href="#section-contact">CONTATO</a>
                 </li>
                 <li>
                     <a href="">EXTRA</a>
@@ -70,16 +72,16 @@ class Navbar extends React.Component {
                 <div id="menuDown"  class={ this.state.condition ? "menuDown showMenu" : "menuDown" }>
                     <ul>
                         <li>
-                            <a href="">SOBRE NÓS</a>
+                            <a href="#section-about-us">SOBRE NÓS</a>
                         </li>
                         <li>
-                            <a href="">SERVIÇOS</a>
+                            <a href="#section-our-services">SERVIÇOS</a>
                         </li>
                         <li>
-                            <a href="">PARCERIAS</a>
+                            <a href="#section-clients-and-partners">PARCERIAS</a>
                         </li>
                         <li>
-                            <a href="">CONTATO</a>
+                            <a href="#section-contact">CONTATO</a>
                         </li>
                         <li>
                             <a href="">EXTRA</a>
