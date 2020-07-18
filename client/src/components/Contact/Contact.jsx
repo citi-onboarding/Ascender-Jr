@@ -4,18 +4,18 @@ import api from '../../services/api';
 
 import './Contact.css';
 
-import instagram from './assets/instagram.png';
-import whatsapp from './assets/whatsapp.png';
-import gmail from './assets/gmail.png';
-import linkedin from './assets/linkedin.png';
-import facebook from './assets/facebook.png';
-import userform from './assets/user-form.png';
-import envelope from './assets/envelope-form.png';
-import card from './assets/card-form.png';
-import note from './assets/note-form.png';
-import code from './assets/code.svg';
-import coracao from './assets/coracao.svg';
-import citi from './assets/citi-logo.png';
+import instagram from '../../assets/instagram.png';
+import whatsapp from '../../assets/whatsapp.png';
+import gmail from '../../assets/gmail.png';
+import linkedin from '../../assets/linkedin.png';
+import facebook from '../../assets/facebook.png';
+import userform from '../../assets/user-form.png';
+import envelope from '../../assets/envelope-form.png';
+import card from '../../assets/card-form.png';
+import note from '../../assets/note-form.png';
+import code from '../../assets/code.svg';
+import coracao from '../../assets/coracao.svg';
+import citi from '../../assets/citi-logo.png';
 
 
 const initialState = {
@@ -69,9 +69,9 @@ const Contact = () => {
                         <p>ascenderjr@gmail.com</p>
                     </div>
                     <div className="container-social-media">
-                        <a href="" id="instagram"><img className="instagram" src= { instagram } alt=""/></a>
-                        <a href="" id="linkedin"><img className="linkedin" src= { linkedin } alt=""/></a>
-                        <a href=""><img className="facebook" src= { facebook } alt=""/></a>
+                        <a href="https://www.instagram.com/ascender.jr/" id="instagram"><img className="instagram" src= { instagram } alt=""/></a>
+                        <a href="https://www.linkedin.com/company/ascender-jr-/" id="linkedin"><img className="linkedin" src= { linkedin } alt=""/></a>
+                        <a href="https://www.facebook.com/Ascender.Junior"><img className="facebook" src= { facebook } alt=""/></a>
                     </div>
                     <p className="ascender-info">Ascender Jr. - Soluções em Energia | © 2020 Universidade Federal de Ouro Preto CNPJ: 20.413.778/0001-30</p>
                 </div>
