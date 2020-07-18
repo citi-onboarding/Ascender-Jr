@@ -8,18 +8,16 @@ import logo from '../../assets/logooficial.png';
 
 
 const Banner = () => {
-
-
   const [banners, setBanners] = useState([]);
 
   useEffect(() => {
-
     api.get('/banner').then(response => {
       const dataBanners = response.data;
 
       setBanners(dataBanners);
     });
   }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -29,19 +27,20 @@ const Banner = () => {
     autoplay: true,
     arrows: false
   };
-    return (
-      <div id="slider-container">
-        <Slider {... settings}>
-          {banners.map(({ imageUrl, text, _id }) => (
-            <div className="main-content" key={_id}>
-                <img src= { imageUrl[0].url } className="Banner-image" alt=""/>
-                <h1 className="text">{text}</h1>
-            </div>
-          ))}
-        </Slider>
-        <img id="logo-banner" src={ logo } alt=""/>
-      </div>
-    );
+
+  return (
+    <div id="slider-container">
+      <Slider {... settings}>
+        {banners.map(({ imageUrl, text, _id }) => (
+          <div className="main-content" key={_id}>
+              <img src= { imageUrl[0].url } className="Banner-image" alt=""/>
+              <h1 className="text">{text}</h1>
+          </div>
+        ))}
+      </Slider>
+      <img id="logo-banner" src={ logo } alt=""/>
+    </div>
+  );
   }
 
 
