@@ -11,7 +11,7 @@ const navbar = new keystone.List('navbar', {
 // Then we gonna add the fields
 navbar.add({
   title: {
-    type: Types.Text, initial: false, label: 'Título da seção', note: 'Título da seção'
+    type: Types.Text, initial: true, label: 'Título da seção'
   },
   url: { type: Types.Url, initial: true, required: true, label:'Url', index: true}
 });
