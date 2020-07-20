@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ExtraMenu from '../ExtraMenu/Index';
 import "./Navbar.css";
 
 import logo from "../../assets/logo.png";
@@ -60,9 +61,7 @@ const Navbar = () => {
           <a href="#secao-contato">CONTATO</a>
         </li>
         <li>
-          <a href="#extra" id="extra-web" onClick={handleExtra}>
-            EXTRA
-          </a>
+          <ExtraMenu />
         </li>
       </ul>
       <div className="container-menuDown" onClick={handleClick}>
@@ -89,7 +88,8 @@ const Navbar = () => {
               <a href="#secao-contato">CONTATO</a>
             </li>
             <li>
-              <a href="#extra">EXTRA</a>
+              {/* <a href="#extra">EXTRA</a> */}
+              <ExtraMenu />
             </li>
           </ul>
           <img src={luz} id="luz" alt="luz" />

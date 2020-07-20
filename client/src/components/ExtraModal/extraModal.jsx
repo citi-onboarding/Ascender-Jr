@@ -1,7 +1,7 @@
 import React from 'react';
-import './extra.css';
+import './extraModal.css';
 
-const Extra = () => {
+const ExtraModal = () => {
 
     const closeExtra = () => {
         const extraModal = document.querySelector('.fundo-extra');
@@ -18,4 +18,4 @@ const Extra = () => {
         </div>
     );
 }
-export default Extra;
+export default ExtraModal;
