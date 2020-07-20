@@ -10,7 +10,6 @@ const Banner = new keystone.List('Banner', {
 	map: { name: 'bannerName' },
 	label: 'Banners'
   });
-  
 
 Banner.add({
 	text: {

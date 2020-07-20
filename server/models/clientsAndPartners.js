@@ -19,7 +19,7 @@ ClientsAndPartners.add({
 		type: Types.Textarea, required: true, initial: true,label: 'Descrição', note: 'Descrição sobre o cliente ou parceiro'
 	},
 	image: {
-		type: Types.CloudinaryImage, required: true, initial: true, label: 'Imagem' 
+		type: Types.CloudinaryImage, required: true, initial: true, label: 'Imagem'
 	}
 });
 
