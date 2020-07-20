@@ -14,8 +14,12 @@ export default function ExtraMenuMobile() {
   }, []);
 
   const handleClick = () => {
-    const divs = document.querySelector(".sub-menu");
-    divs.style.display = 'block';
+    if (response.length > 0) {
+      const divs = document.querySelector(".sub-menu");
+      divs.style.display = 'block';
+    } else {
+      console.log('oops');
+    }
   };
 
   const handleLinks = () => {
