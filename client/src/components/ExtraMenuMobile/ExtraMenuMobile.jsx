@@ -3,6 +3,7 @@ import api from '../../services/api';
 import './ExtraMenuMobile.css';
 
 export default function ExtraMenuMobile() {
+  const [openModal, setOpenModal] = useState(false);
   const [response, setResponse] = useState([]);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export default function ExtraMenuMobile() {
       const divs = document.querySelector(".sub-menu");
       divs.style.display = 'block';
     } else {
-      console.log('oops');
+      setOpenModal(true);
     }
   };
 
