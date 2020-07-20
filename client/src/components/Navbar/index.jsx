@@ -35,11 +35,6 @@ const Navbar = () => {
     setCondition(!condition);
   };
 
-  const handleExtra = (e) => {
-    console.log(e.target);
-    e.target.style.backgroundColor = '#fff';
-  };
-
   return (
     <nav id="navbar-nav">
       <div id="logo-container">
@@ -87,8 +82,7 @@ const Navbar = () => {
             <li>
               <a href="#secao-contato">CONTATO</a>
             </li>
-            <li>
-              {/* <a href="#extra">EXTRA</a> */}
+            <li className="extra-menu">
               <ExtraMenu />
             </li>
           </ul>
