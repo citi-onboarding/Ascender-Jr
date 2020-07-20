@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ExtraMenu from '../ExtraMenu/Index';
+import ExtraMenu from "../ExtraMenu/Index";
+import ExtraMenuMobile from "../ExtraMenuMobile/ExtraMenuMobile";
 import "./Navbar.css";
 
 import logo from "../../assets/logo.png";
@@ -7,6 +8,7 @@ import luz from "../../assets/luz-menu.png";
 
 const Navbar = () => {
   const [condition, setCondition] = useState(false);
+
   const handleScroll = () => {
     if (
       document.body.scrollTop > 90 ||
@@ -33,6 +35,11 @@ const Navbar = () => {
 
   const handleClick = () => {
     setCondition(!condition);
+
+    if (!condition) {
+      const divs = document.querySelector(".sub-menu");
+      divs.style.display = 'none';
+    }
   };
 
   return (
@@ -59,11 +66,20 @@ const Navbar = () => {
           <ExtraMenu />
         </li>
       </ul>
-      <div className="container-menuDown" onClick={handleClick}>
+      <div className="container-menuDown">
         <div>
-          <div className={condition ? "changeBars1 bar1" : "bar1"}></div>
-          <div className={condition ? "changeBars2 bar2" : "bar2"}></div>
-          <div className={condition ? "changeBars3 bar3" : "bar3"}></div>
+          <div
+            className={condition ? "changeBars1 bar1" : "bar1"}
+            onClick={handleClick}
+          />
+          <div
+            className={condition ? "changeBars2 bar2" : "bar2"}
+            onClick={handleClick}
+          />
+          <div
+            className={condition ? "changeBars3 bar3" : "bar3"}
+            onClick={handleClick}
+          />
         </div>
         <div
           id="menuDown"
@@ -71,22 +87,30 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <a href="#section-about-us">SOBRE NÓS</a>
+              <a href="#section-about-us" onClick={handleClick}>
+                SOBRE NÓS
+              </a>
             </li>
             <li>
-              <a href="#section-our-services">SERVIÇOS</a>
+              <a href="#section-our-services" onClick={handleClick}>
+                SERVIÇOS
+              </a>
             </li>
             <li>
-              <a href="#section-clients-and-partners">PARCERIAS</a>
+              <a href="#section-clients-and-partners" onClick={handleClick}>
+                PARCERIAS
+              </a>
             </li>
             <li>
-              <a href="#secao-contato">CONTATO</a>
+              <a href="#secao-contato" onClick={handleClick}>
+                CONTATO
+              </a>
             </li>
             <li className="extra-menu">
-              <ExtraMenu />
+              <ExtraMenuMobile />
             </li>
           </ul>
-          <img src={luz} id="luz" alt="luz" />
+          <img src={luz} id="luz" alt="Lâmpada logo da empresa" />
         </div>
       </div>
     </nav>

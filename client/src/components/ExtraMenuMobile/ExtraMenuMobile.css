@@ -1,0 +1,42 @@
+.extra-mobile {
+  font-family: 'Lalezar', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 19px;
+  text-align: center;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.extra-mobile .extra-links {
+  display: block;
+}
+
+.extra-mobile .sub-menu {
+  display: none;
+  display: block;
+  background-color: white;
+  z-index: 2;
+  height: auto;
+  width: 70%;
+  padding: 10px 0;
+  position: absolute;
+}
+
+.extra-mobile .extra-links a {
+  color: black;
+  font-size: 0.5em;
+}
+
+@media only screen and (max-width: 970px) {
+  .extra-mobile p {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+    font-size: .7em;
+  }
+}
