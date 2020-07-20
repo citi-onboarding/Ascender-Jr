@@ -1,18 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 
 import logo from './logo.png';
 import luz from './luz-menu.png';
 
-class Navbar extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            className: 'hidden'
-        }
-    }
-    
-    handleScroll() { 
+const Navbar = () => {
+    const [condition, setCondition] = useState(false);
+    const handleScroll = () => {
         if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
             document.getElementById("navbar-nav").style.height = "75px";
             document.getElementById("logo").style.transform = "scale(0.8)";
@@ -27,22 +21,17 @@ class Navbar extends React.Component {
             document.getElementById("navbar-nav").style.backgroundColor = "transparent";
         }
     }
-    componentDidMount() {
-        window.onscroll = () => this.handleScroll()
+
+    useEffect(() => {
+        window.onscroll = () => handleScroll();
+    }, []);
+
+    const handleClick = () => {
+        setCondition(!condition);
     }
-    getInitialState () {
-        return {
-          condition: false
-        }
-    }
-    handleClick = () => {
-        this.setState({
-            condition: !this.state.condition
-        });
-    }
-    render() {
-        return (
-            <nav id="navbar-nav">
+
+    return (
+        <nav id="navbar-nav">
             <div id="logo-container">
                 <a href="#slider-container"><img src={ logo } id="logo" alt="logo"/></a>
             </div>
@@ -60,16 +49,16 @@ class Navbar extends React.Component {
                     <a href="#secao-contato">CONTATO</a>
                 </li>
                 <li>
-                    <a href="#extra">EXTRA</a>
+                    <a href="#extra" id="extra-web">EXTRA</a>
                 </li>
             </ul>
-            <div className="container-menuDown" onClick={ this.handleClick }>
+            <div className="container-menuDown" onClick={ handleClick }>
                 <div>
-                    <div className={ this.state.condition ? "changeBars1 bar1" : "bar1" }></div>
-                    <div className={ this.state.condition ? "changeBars2 bar2" : "bar2" }></div>
-                    <div className={ this.state.condition ? "changeBars3 bar3" : "bar3" }></div>
+                    <div className={ condition ? "changeBars1 bar1" : "bar1" }></div>
+                    <div className={ condition ? "changeBars2 bar2" : "bar2" }></div>
+                    <div className={ condition ? "changeBars3 bar3" : "bar3" }></div>
                 </div>
-                <div id="menuDown"  className={ this.state.condition ? "menuDown showMenu" : "menuDown" }>
+                <div id="menuDown"  className={ condition ? "menuDown showMenu" : "menuDown" }>
                     <ul>
                         <li>
                             <a href="#section-about-us">SOBRE NÓS</a>
@@ -91,8 +80,6 @@ class Navbar extends React.Component {
                 </div>
             </div>
         </nav>
-        );  
-    }
-
+    );
 }
 export default Navbar;
