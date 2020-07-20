@@ -16,8 +16,6 @@ const Extra = () => {
             <p>Ops, ainda trabalhando nessa seção</p>
         </div>
         </div>
-    );  
-
-
+    );
 }
 export default Extra;

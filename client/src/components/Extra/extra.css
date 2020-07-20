@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('extra.png');
+    background-image: url('../../assets/extra.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -41,7 +41,6 @@
     font-size: 22px;
     line-height: 19px;
     text-align: center;
-    
 }
 
 .box-extra p {
