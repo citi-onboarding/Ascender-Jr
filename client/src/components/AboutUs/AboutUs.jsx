@@ -7,10 +7,11 @@ import Ray from '../../assets/ray.png';
 
 import ChipWeb from '../../assets/chip-web.svg';
 import ChipMobile from '../../assets/chip-mobile.svg';
+import backgroundImage from '../../assets/caminh-about-us-png.png'
+import Caminho from '../../assets/caminho-about-us.svg';
 
 
 const AboutUs = () => {
-
   const [vision, setVision] = useState({});
   const [mission, setMision] = useState({});
 
@@ -19,13 +20,11 @@ const AboutUs = () => {
 
   const [companyHistory, setCompanyHistory] = useState('');
 
-
   useEffect(() => {
 
     api.get('about-us').then(response => {
       const dataAboutUs = response.data[0];
 
-      
       setVision({
         text: dataAboutUs.vision.text,
         image_url: dataAboutUs.vision.image.secure_url
@@ -43,11 +42,11 @@ const AboutUs = () => {
       setCompanyHistory(dataAboutUs.companyHistory);
 
     });
-    
   }, []);
-  
+
   return (
   <section id="section-about-us">
+    <img src={backgroundImage} alt="" className="caminho-about-us" />
 
     <div className="container">
       <h1>Sobre nós</h1>
@@ -90,7 +89,7 @@ const AboutUs = () => {
           </div>
 
         </div>
-                
+
         <div className="company-history">
           <div className="company-subtitle">
             <img className="ray" src={ Ray } alt="" />
@@ -104,7 +103,6 @@ const AboutUs = () => {
 
       </article>
     </div>
-    
   </section>
   );
 }

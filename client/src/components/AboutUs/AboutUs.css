@@ -8,6 +8,7 @@
   justify-content: center;
   margin: 80px 0;
   height: 100%;
+  position: relative;
 }
 
 /***** CONTAINER WITH CONTENT *****/
@@ -176,4 +177,42 @@
     max-height: 54px;
   }
 
+}
+
+/* SECTION'S SVG */
+#section-about-us .caminho-about-us {
+  position: absolute;
+  top: -185px;
+  right: 120px;
+}
+
+@media only screen and (max-width: 1025px) {
+  #section-about-us .caminho-about-us {
+    width: 79% !important;
+    height: 173% !important;
+    margin-top: 30px;
+    padding-left: 20px !important;
+  }
+}
+
+
+@media only screen and (max-width: 1300px) {
+  #section-about-us .caminho-about-us {
+    width: 79.5%;
+    padding-left: 7px !important;
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  #section-about-us .caminho-about-us {
+    height: 180%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #section-about-us .caminho-about-us {
+    height: 180%;
+    width: 77%;
+  }
 }
