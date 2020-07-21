@@ -195,8 +195,8 @@
 @media only screen and (max-width: 1025px) {
   #section-about-us .caminho-about-us {
     width: 79% !important;
-    height: 173% !important;
-    margin-top: 30px;
+    height: 170% !important;
+    margin-top: 40px !important;
     padding-left: 20px !important;
   }
 }
@@ -212,7 +212,7 @@
 @media only screen and (max-width: 1300px) {
   #section-about-us .caminho-about-us {
     width: 79.5%;
-    padding-left: 7px !important;
+    padding-left: 7px;
     margin-top: -20px;
   }
 }
