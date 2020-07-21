@@ -47,7 +47,7 @@
   display: flex !important;
   display: grid !important;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
- 
+
   align-items: center;
   justify-content: center;
 
@@ -74,7 +74,8 @@
 }
 
 #section-clients-and-partners .container-carousel .box-card .partner-image {
-  max-width: 128px;
+  width: 128px;
+  min-height: 115px;
   border-radius: 16px;
   box-shadow: 4px 4px 5px #000000;
 }
@@ -107,7 +108,6 @@
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 1024px) {
- 
   html {
     font-size: 55%;
   }
@@ -131,7 +131,7 @@
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
-    
+
     margin-bottom: 32px;
   }
 
@@ -147,12 +147,12 @@
   #section-clients-and-partners .container-carousel .box-card .partner-image {
     max-width: 80px;
   }
-  
+
   #section-clients-and-partners .container-carousel .box-card .partner-info {
     max-width: 256px;
     padding-left: 12px;
   }
-  
+
   #section-clients-and-partners .container-carousel .box-card h2 {
     display: none;
   }
