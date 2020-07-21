@@ -6,7 +6,7 @@ import "./Navbar.css";
 import logo from "../../assets/logo.png";
 import luz from "../../assets/luz-menu.png";
 
-const Navbar = () => {
+const Navbar = ({ setOpenModal }) => {
   const [condition, setCondition] = useState(false);
 
   const handleScroll = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
           <a href="#secao-contato">CONTATO</a>
         </li>
         <li>
-          <ExtraMenu />
+          <ExtraMenu setOpenModal={setOpenModal} />
         </li>
       </ul>
       <div className="container-menuDown">
@@ -107,7 +107,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="extra-menu">
-              <ExtraMenuMobile />
+              <ExtraMenuMobile setOpenModal={setOpenModal} />
             </li>
           </ul>
           <img src={luz} id="luz" alt="Lâmpada logo da empresa" />

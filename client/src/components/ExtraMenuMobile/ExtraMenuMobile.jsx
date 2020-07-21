@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import './ExtraMenuMobile.css';
 
-export default function ExtraMenuMobile() {
-  const [openModal, setOpenModal] = useState(false);
+export default function ExtraMenuMobile({ setOpenModal }) {
   const [response, setResponse] = useState([]);
 
   useEffect(() => {

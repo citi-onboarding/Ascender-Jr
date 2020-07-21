@@ -1,21 +1,23 @@
 import React, { useEffect } from "react";
 import "./extraModal.css";
 
-const ExtraModal = ({ openModal }) => {
+const ExtraModal = ({ openModal, setOpenModal }) => {
   const closeExtra = () => {
-    const extraModal = document.querySelector(".fundo-extra");
-    extraModal.style.display = "none";
+    setOpenModal(false);
   };
 
   useEffect(() => {
     if (openModal) {
       const extraModal = document.querySelector(".fundo-extra");
-      extraModal.style.display = "block";
+      extraModal.style.display = 'flex';
+    } else {
+      const extraModal = document.querySelector(".fundo-extra");
+      extraModal.style.display = 'none';
     }
   }, [openModal]);
 
   return (
-    <div className="fundo-extra">
+    <div className="fundo-extra hidden">
       <div className="box-extra">
         <button className="close-extra" onClick={closeExtra}>
           X

@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import api from '../../services/api';
 import './ExtraMenu.css';
 
-export default function ExtraMenu() {
+export default function ExtraMenu({ setOpenModal }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const [response, setResponse] = useState([]);
 
@@ -18,7 +18,11 @@ export default function ExtraMenu() {
   }, []);
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+    if (response.length > 0) {
+      setAnchorEl(event.currentTarget);
+    } else {
+      setOpenModal(true);
+    }
   };
 
   const handleClose = () => {
