@@ -7,8 +7,7 @@ import Ray from '../../assets/ray.png';
 
 import ChipWeb from '../../assets/chip-web.svg';
 import ChipMobile from '../../assets/chip-mobile.svg';
-import backgroundImage from '../../assets/caminh-about-us-png.png'
-
+import backgroundImage from '../../assets/caminh-about-us-png.png';
 
 const AboutUs = () => {
   const [vision, setVision] = useState({});
