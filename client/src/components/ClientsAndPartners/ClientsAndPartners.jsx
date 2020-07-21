@@ -6,7 +6,6 @@ import api from '../../services/api';
 import './ClientsAndPartners.css';
 
 const ClientsAndPartners = () => {
-
   const [partners, setPartners] = useState([]);
 
   useEffect(() => {
@@ -48,7 +47,6 @@ const ClientsAndPartners = () => {
     ]
   };
 
-
   return (
     <section id="section-clients-and-partners">
       <div className="container-carousel">
@@ -64,12 +62,10 @@ const ClientsAndPartners = () => {
               </div>
             </div>
           ))}
-          
+
         </Slider>
-
       </div>
-
-    </section>  
+    </section>
   );
 }
 

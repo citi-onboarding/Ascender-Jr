@@ -186,6 +186,12 @@
   right: 120px;
 }
 
+@media only screen and (max-width: 900px) {
+  #section-about-us .caminho-about-us {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1025px) {
   #section-about-us .caminho-about-us {
     width: 79% !important;
@@ -195,6 +201,13 @@
   }
 }
 
+/* IPAD PRO */
+@media screen and (width: 1366px) and (height: 1024px) {
+  #section-about-us .caminho-about-us {
+    width: 79.5%;
+    padding-left: 0px !important;
+  }
+}
 
 @media only screen and (max-width: 1300px) {
   #section-about-us .caminho-about-us {
