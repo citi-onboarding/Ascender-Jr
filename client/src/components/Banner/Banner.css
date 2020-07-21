@@ -58,6 +58,11 @@
     margin-left: 150px;
     z-index: 2000;
   }
+
+  #logo-banner {
+    width: 12em;
+    bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
