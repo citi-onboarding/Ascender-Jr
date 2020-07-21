@@ -8,7 +8,6 @@ import Ray from '../../assets/ray.png';
 import ChipWeb from '../../assets/chip-web.svg';
 import ChipMobile from '../../assets/chip-mobile.svg';
 import backgroundImage from '../../assets/caminh-about-us-png.png'
-import Caminho from '../../assets/caminho-about-us.svg';
 
 
 const AboutUs = () => {
