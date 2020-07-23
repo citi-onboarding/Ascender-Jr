@@ -54,7 +54,7 @@
   color: var(--primary-color);
 }
 
-#section-about-us .cards p, ul  {
+#section-about-us .cards p,#section-about-us .cards ul  {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   line-height: 2.0rem;
