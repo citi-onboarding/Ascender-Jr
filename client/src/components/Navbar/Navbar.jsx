@@ -33,17 +33,43 @@ const Navbar = ({ setOpenModal }) => {
     window.onscroll = () => handleScroll();
   }, []);
 
+  useEffect(() => {
+    const menu = document.querySelector('#menuDown')
+    const logo = document.querySelector('#logo')
+    const links = document.querySelector('#menuDown ul')
+
+    if (condition) {
+      menu.classList.add('showMenu')
+      logo.classList.add('transition-logo')
+      links.classList.add('transition-links')
+
+      menu.classList.remove('hiddenMenu')
+      logo.classList.remove('back-transition-logo')
+      links.classList.remove('back-transition-links')
+
+    } else if(menu.classList.contains('showMenu')) {
+      menu.classList.add('hiddenMenu')
+      
+      menu.classList.remove('showMenu')
+      logo.classList.replace('transition-logo', 'back-transition-logo')
+      links.classList.replace('transition-links', 'back-transition-links')
+    } 
+
+  }, [condition])
+
   const handleClick = () => {
     setCondition(!condition);
-
+    
     if (!condition) {
       const divs = document.querySelector(".sub-menu");
       divs.style.display = 'none';
     }
+
   };
 
+
   return (
-    <nav id="navbar-nav">
+    <nav id="navbar-nav" className={condition ? "show-navbar" : ""}>
       <div id="logo-container">
         <a href="#slider-container">
           <img src={logo} id="logo" alt="logo" />
@@ -67,23 +93,21 @@ const Navbar = ({ setOpenModal }) => {
         </li>
       </ul>
       <div className="container-menuDown">
-        <div>
+        <div className="menu" onClick={handleClick}>
           <div
             className={condition ? "changeBars1 bar1" : "bar1"}
-            onClick={handleClick}
           />
           <div
             className={condition ? "changeBars2 bar2" : "bar2"}
-            onClick={handleClick}
+
           />
           <div
             className={condition ? "changeBars3 bar3" : "bar3"}
-            onClick={handleClick}
           />
         </div>
         <div
           id="menuDown"
-          className={condition ? "menuDown showMenu" : "menuDown"}
+          className={"menuDown"}
         >
           <ul>
             <li>

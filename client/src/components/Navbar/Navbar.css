@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
 nav {
     background-color: transparent;
     display: flex;
@@ -18,6 +20,12 @@ nav {
     align-items: center;
     margin-bottom: 0;
 }
+
+.show-navbar {
+    background-color: transparent !important;
+    transition: background 800ms !important;
+}
+
 #navbar a {
     text-decoration: none;
     font-family: 'Lalezar', cursive;
@@ -107,52 +115,107 @@ transform: rotate(45deg) translate(-8px, -8px);
     z-index: 10;
 }
 .menuDown {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
     height: 100vh;
-    background-color: #113c67;
-    width: 35%;
+    background-color: #052A4F;
+    width: 50%;
     box-shadow: -5px 4px 12px #1c231659;
     padding-top: 6em;
     z-index: -1;
-    transition: 250ms;
 }
 .menuDown ul {
     padding: 0;
     list-style: none;
+    margin-top: 8%;
 }
+
+.menuDown .transition-links {
+    animation-name: slider-items;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.menuDown .back-transition-links {
+    animation-name: back-slider-items;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
 .menuDown ul li {
     height: 3em;
     display: flex;
     align-items: center;
-    transition: 250ms;
 }
-.menuDown ul li a {
+
+.menuDown ul li a, .menuDown ul li p {
     color: #ffffff;
     display: flex;
     align-items: center;
     font-family: 'Lalezar', cursive;
+    font-size: 2.4rem;
     width: 100%;
     height: 100%;
     margin-left: 2em;
     text-decoration: none;
+    cursor: pointer;
 }
 .menuDown ul li:hover {
     border-left: 5px solid #b0d2e0;
     transition: 250ms;
 }
+
 .showMenu {
     display: block;
+
+    animation-name: show-item;
+    animation-duration: 1s;
+    animation-fill-mode: forwards !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+.hiddenMenu {
+    animation-name: hidden-item;
+    animation-duration: 1s;
+    animation-fill-mode: forwards !important;
+}
+
+.back-transition-logo {
+    z-index: 200;
+    position: relative;
+    animation-name: back-logo-transition;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+   
+}
+
+.transition-logo {
+    animation-name: logo-transition;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    position: relative;
+    z-index: 200;
+}
+
+#luz {
+    position: absolute;
+    right: 0;
+    bottom: 2%; 
+}
+
 
 @media only screen and (max-width: 970px) {
+    .menuDown {
+        width: 50%;
+    }
     .container-menuDown {
         display: block;
         margin-right: 3em;
+    }
+    .container-menuDown .menu {
+        cursor: pointer;
     }
     #navbar {
         display: none;
@@ -160,12 +223,125 @@ transform: rotate(45deg) translate(-8px, -8px);
     nav {
         justify-content: space-between;
     }
+
+    @keyframes logo-transition {
+        from {
+            margin-left: 0%;
+        }
+        to {
+            margin-left: 72%;
+        }
+    }
+
+    @keyframes back-logo-transition {
+        from {
+            margin-left: 72%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
 }
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 768px) {
     .menuDown {
-        width: 70%;
+        width: 60%;
+    }
+    #logo-container img {
+        width: 60%;
+    }
+
+
+    @keyframes logo-transition {
+        from {
+            margin-left: 0%;
+        }
+        to {
+            margin-left: 42%;
+        }
+    }
+
+    @keyframes back-logo-transition {
+        from {
+            margin-left: 42%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .menuDown {
+        width: 80%;
+    }
+    .menuDown ul li a,.menuDown ul li p {
+        font-size: 2.0rem;
     }
     #logo-container img {
         width: 90%;
+    }
+
+    @keyframes logo-transition {
+        from {
+            margin-left: 0%;
+        }
+        to {
+            margin-left: 16%;
+        }
+    }
+
+    @keyframes back-logo-transition {
+        from {
+            margin-left: 16%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
+}
+
+
+@keyframes slider-items {
+    from {
+        opacity: 0;
+        margin-left: 100%;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0%;
+    }
+}
+
+@keyframes back-slider-items {
+    from {
+        opacity: 1;
+        margin-left: 0%;
+    }
+    to {
+        opacity: 0;
+        margin-left: 100%;
+    }
+}
+
+@keyframes show-item {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes hidden-item {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    to {
+        visibility: hidden;
+        opacity: 0;
     }
 }
