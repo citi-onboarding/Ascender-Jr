@@ -17,6 +17,10 @@
 #secao-contato .container-whatsapp img, .container-email img, .container-social-media img {
     width: 50px;
 }
+#secao-contato .container-whatsapp img:hover {
+    width: 44px;
+    filter: brightness(0.7);
+}
 #secao-contato .container-social-media img:hover {
     width: 44px;
     filter: brightness(0.7);
