@@ -55,7 +55,11 @@ const Contact = () => {
       <div className="blur-degrade">
         <div className="infos-contato">
           <div className="container-whatsapp">
-            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/31985056323">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://wa.me/3185056323"
+            >
               <img className="svg-whatsapp" src={whatsapp} alt="" />
             </a>
             <p>(31) 9 8505-6323</p>
