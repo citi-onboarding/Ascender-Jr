@@ -58,7 +58,7 @@ const Contact = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://wa.me/3185056323"
+              href="https://wa.me/5531985056323"
             >
               <img className="svg-whatsapp" src={whatsapp} alt="" />
             </a>
