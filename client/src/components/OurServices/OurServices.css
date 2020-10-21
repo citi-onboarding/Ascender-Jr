@@ -1,22 +1,19 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-
 @import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
 
 /***** OUR SERVICES BODY *****/
 #section-our-services {
-  background-color: #021B33;
+  background-color: #021b33;
   background-image: url("../../assets/grafismo-web.png");
   background-repeat: no-repeat;
-  
+
   background-size: cover;
 }
 
-
 /***** CONTENT CAROUSEL *****/
 #section-our-services .container-carousel {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,12 +25,11 @@
   margin: auto;
 }
 
-
-#section-our-services .container-carousel  h1 {
-  font-family: 'Lalezar', cursive;
+#section-our-services .container-carousel h1 {
+  font-family: "Lalezar", cursive;
   text-transform: capitalize;
   font-weight: 400;
-  color: #FFF;
+  color: #fff;
   font-size: 4.8rem;
   line-height: 5.8rem;
 
@@ -43,10 +39,7 @@
 
   margin-top: 80px;
   margin-bottom: 16px;
- 
 }
-
-
 
 /***** SLICK BODY STYLES *****/
 #section-our-services .slick-slider {
@@ -57,7 +50,6 @@
 #section-our-services .slick-slide > div {
   width: 95%;
   margin: auto;
- 
 }
 
 /***** CAROUSEL CARD *****/
@@ -69,7 +61,7 @@
 
   height: 100%;
   width: 100%;
-  
+
   min-height: 500px;
 
   margin-bottom: 32px;
@@ -79,7 +71,7 @@
   font-size: 2.4rem;
   line-height: 3.4rem;
   font-weight: 900;
-  color: #052A4F;
+  color: #052a4f;
 }
 
 #section-our-services .container-carousel .card .primary-card h3 {
@@ -87,10 +79,10 @@
 }
 
 #section-our-services .container-carousel .card p {
-  font-size: 2.0rem;
+  font-size: 2rem;
   line-height: 2.8rem;
   font-weight: 400;
-  color: #052A4F;
+  color: #052a4f;
 }
 
 /***** PRIMARY CARD *****/
@@ -110,43 +102,45 @@
   display: grid;
   grid-template-rows: 1.5fr 1fr;
   height: 100%;
-  
+
   overflow-y: auto;
   scroll-behavior: smooth;
 
   border-radius: 12px;
 }
 
-
-#section-our-services .container-carousel .card .primary-card .content .primary-card-image {
+#section-our-services
+  .container-carousel
+  .card
+  .primary-card
+  .content
+  .primary-card-image {
   width: 100%;
-  height: 105%;
   z-index: -1;
+  position: absolute;
+  top: -70px;
 }
-
 
 #section-our-services .container-carousel .card .primary-card .description {
   position: absolute;
   top: 55%;
-  background-color: #F2E463;
+  background-color: #f2e463;
 
   padding: 0 32px 32px 32px;
   border-radius: 0 0 16px 16px;
 }
 
-
-
-
 /***** SECONDARY CARD *****/
 #section-our-services .container-carousel .card .secondary-card {
   display: grid;
-  grid-template-rows: minmax(1fr , 250px);
+  grid-template-rows: minmax(1fr, 250px);
   gap: 16px;
   height: 100%;
   overflow: hidden;
 }
 
-#section-our-services .container-carousel .card .secondary-card .box-before, .box-after {
+#section-our-services .container-carousel .card .secondary-card .box-before,
+.box-after {
   background-image: url("../../assets/secondary-layer.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -164,7 +158,8 @@
   overflow: hidden;
 }
 
-#section-our-services .container-carousel .card .secondary-card .before-image, .after-image {
+#section-our-services .container-carousel .card .secondary-card .before-image,
+.after-image {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -173,7 +168,7 @@
 #section-our-services .container-carousel .card .secondary-card .description {
   height: 100%;
   padding: 0 16px 16px 16px;
-  background-color: #F2E463;
+  background-color: #f2e463;
   border-radius: 0 0 16px 16px;
 }
 
@@ -184,13 +179,13 @@
 
 #section-our-services .slick-dots li button:before {
   font-size: 28px;
-  color: #D4D4D4;
+  color: #d4d4d4;
   opacity: 1;
 }
 
 #section-our-services .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: #F2E463 !important;
+  color: #f2e463 !important;
 }
 
 #section-our-services .slick-next {
@@ -201,40 +196,45 @@
   left: -20px;
 }
 
-#section-our-services .slick-prev, .slick-next {
+#section-our-services .slick-prev,
+.slick-next {
   top: 45%;
 }
 
 #section-our-services .slick-prev:before {
-  content: '\f053';
+  content: "\f053";
 }
 
 #section-our-services .slick-next:before {
-  content: '\f054';
+  content: "\f054";
 }
 
-#section-our-services .slick-prev:before, .slick-next:before {
+#section-our-services .slick-prev:before,
+.slick-next:before {
   font-family: "Font Awesome 5 Free";
   font-size: 40px;
   opacity: 1;
-  color: #D4D4D4;
+  color: #d4d4d4;
   font-weight: 900;
 }
 
 /***** MOD SCROLLBAR ******/
-#section-our-services .container-carousel .card .primary-card .content::-webkit-scrollbar {
+#section-our-services
+  .container-carousel
+  .card
+  .primary-card
+  .content::-webkit-scrollbar {
   display: none;
 }
 
 /***** MEDIA QUERIES *****/
 @media (max-width: 1024px) {
- 
   html {
     font-size: 55%;
   }
 
   #section-our-services {
-    background-color: #021B33;
+    background-color: #021b33;
     background-image: url("../../assets/grafismo-mobile.png");
     background-position: center;
     background-size: cover;
@@ -248,9 +248,9 @@
 
   #section-our-services .container-carousel .card {
     display: grid !important;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
-    
+
     width: 100%;
   }
 
@@ -261,26 +261,21 @@
   #section-our-services .container-carousel .card .secondary-card {
     display: none;
   }
-
 }
 
-
 @media (max-width: 768px) {
-
   #section-our-services .container-carousel > h1 {
-
     font-size: 3.2rem;
     line-height: 4.2rem;
-  
+
     margin-bottom: 24px;
   }
 
-
   #section-our-services .container-carousel .card {
     display: grid !important;
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     gap: 16px;
-    
+
     width: 100%;
   }
 
@@ -288,20 +283,19 @@
     font-size: 2.2rem;
     line-height: 3.2rem;
     font-weight: 900;
-    color: #052A4F;
+    color: #052a4f;
   }
-  
+
   #section-our-services .container-carousel .card p {
     font-size: 1.8;
     line-height: 2.8rem;
     font-weight: 400;
-    color: #052A4F;
+    color: #052a4f;
   }
 
   #section-our-services .container-carousel .card .primary-card {
     box-shadow: 0px 3px 6px #000000;
   }
-
 
   #section-our-services .container-carousel .card .secondary-card {
     display: none;
@@ -314,31 +308,30 @@
   #section-our-services .slick-dots li button:before {
     font-size: 18px;
   }
-  
-  #section-our-services .slick-prev:before, .slick-next:before {
+
+  #section-our-services .slick-prev:before,
+  .slick-next:before {
     font-family: "Font Awesome 5 Free";
     font-size: 28px;
     font-weight: 900;
   }
-
 }
 
 @media (max-width: 560px) {
-
   #section-our-services .container-carousel .card h3 {
     font-size: 2.2rem;
-    line-height: 3.0rem;
+    line-height: 3rem;
     font-weight: 900;
-    color: #052A4F;
+    color: #052a4f;
   }
-  
+
   #section-our-services .container-carousel .card p {
     font-size: 1.6;
     line-height: 2.6rem;
     font-weight: 400;
-    color: #052A4F;
+    color: #052a4f;
   }
-  
+
   #section-our-services .container-carousel .card {
     display: grid !important;
     grid-template-columns: 1fr;
@@ -346,7 +339,6 @@
     min-height: 400px;
     width: 100%;
   }
-
 
   #section-our-services .container-carousel .card .primary-card {
     max-height: 400px;
@@ -370,5 +362,4 @@
   #section-our-services .slick-dots li {
     margin: 0 4px;
   }
-
 }
